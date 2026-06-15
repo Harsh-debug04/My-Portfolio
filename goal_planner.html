@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Curated Archive | Heritage Tracker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#2e4528",
+                        "surface-container-highest": "#eae8de",
+                        "background": "#fffcf7",
+                        "tertiary-fixed": "#f4eedb",
+                        "surface": "#fffcf7",
+                        "secondary-dim": "#455b6b",
+                        "surface-bright": "#fffcf7",
+                        "on-tertiary-fixed-variant": "#666354",
+                        "tertiary-container": "#f4eedb",
+                        "surface-tint": "#4c6545",
+                        "on-secondary-fixed-variant": "#485e6e",
+                        "secondary": "#516777",
+                        "on-primary-fixed-variant": "#496242",
+                        "tertiary-fixed-dim": "#e5dfce",
+                        "on-error-container": "#742410",
+                        "primary-fixed": "#ceebc2",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f6f4ec",
+                        "secondary-fixed-dim": "#c0d8ea",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#f0eee5",
+                        "on-background": "#383831",
+                        "inverse-primary": "#e2ffd5",
+                        "inverse-surface": "#0e0e0c",
+                        "secondary-fixed": "#cee6f8",
+                        "surface-dim": "#e4e3d7",
+                        "on-surface": "#383831",
+                        "outline-variant": "#babab0",
+                        "on-primary": "#e6ffda",
+                        "on-tertiary": "#ffffff",
+                        "primary-dim": "#41593a",
+                        "surface-variant": "#eae8de",
+                        "error": "#a54731",
+                        "on-primary-container": "#405839",
+                        "tertiary-dim": "#5c584a",
+                        "error-dim": "#5c1202",
+                        "surface-container-low": "#fcf9f3",
+                        "on-surface-variant": "#65655c",
+                        "on-secondary-fixed": "#2c4251",
+                        "primary-fixed-dim": "#c0dcb5",
+                        "outline": "#818178",
+                        "error-container": "#fe8b70",
+                        "inverse-on-surface": "#9e9d98",
+                        "tertiary": "#686456",
+                        "primary-container": "#ceebc2",
+                        "on-tertiary-fixed": "#494639",
+                        "secondary-container": "#cee6f8",
+                        "on-tertiary-container": "#5c584b",
+                        "primary": "#4c6545",
+                        "on-secondary-container": "#3e5464"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .serif-italic { font-family: 'Noto Serif', serif; font-style: italic; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-[#f4f1ea] dark:bg-[#1c1c1a] flex flex-col py-12 border-r border-[#e5e2d9] dark:border-[#2a2a27] z-50 hidden md:flex">
+<div class="px-8 mb-12">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<h1 class="text-lg font-serif text-[#383831] dark:text-[#fffcf7]">Heritage Tracker</h1>
+</div>
+<p class="font-manrope uppercase tracking-widest text-[10px] text-[#383831]/60">The Curated Life</p>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-4 text-[#383831]/60 dark:text-[#fffcf7]/60 pl-4 py-3 font-manrope uppercase tracking-widest text-[10px] hover:bg-[#fffcf7]/50 transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center gap-4 text-[#4c6545] dark:text-[#8A9A5B] font-bold border-l-2 border-[#4c6545] pl-4 py-3 font-manrope uppercase tracking-widest text-[10px]" href="index.html">
+<span class="material-symbols-outlined" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span> Goals
+            </a>
+<a class="flex items-center gap-4 text-[#383831]/60 dark:text-[#fffcf7]/60 pl-4 py-3 font-manrope uppercase tracking-widest text-[10px] hover:bg-[#fffcf7]/50 transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined" data-icon="cached">cached</span> Habits
+            </a>
+<a class="flex items-center gap-4 text-[#383831]/60 dark:text-[#fffcf7]/60 pl-4 py-3 font-manrope uppercase tracking-widest text-[10px] hover:bg-[#fffcf7]/50 transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span> Analytics
+            </a>
+</nav>
+<div class="px-8 mb-8">
+<button class="w-full bg-primary text-on-primary py-4 text-[10px] font-manrope uppercase tracking-[0.2em] shadow-sm hover:opacity-90 transition-opacity">
+                New Entry
+            </button>
+</div>
+<div class="px-4 border-t border-[#e5e2d9] dark:border-[#2a2a27] pt-8 space-y-2">
+<a class="flex items-center gap-4 text-[#383831]/60 dark:text-[#fffcf7]/60 pl-4 py-2 font-manrope uppercase tracking-widest text-[10px] hover:bg-[#fffcf7]/50 transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span> Archive
+            </a>
+<a class="flex items-center gap-4 text-[#383831]/60 dark:text-[#fffcf7]/60 pl-4 py-2 font-manrope uppercase tracking-widest text-[10px] hover:bg-[#fffcf7]/50 transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span> Support
+            </a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-72 min-h-screen">
+<!-- TopNavBar (Shared Component - Context: Goals Dashboard) -->
+<header class="sticky top-0 z-40 bg-[#fffcf7] dark:bg-[#1c1c1a]">
+<div class="flex justify-between items-center w-full px-12 py-8 max-w-screen-2xl mx-auto">
+<div class="flex gap-12 items-baseline">
+<span class="text-2xl font-serif italic text-[#383831] dark:text-[#fffcf7]">The Curated Archive</span>
+<nav class="hidden lg:flex gap-8 items-center font-noto-serif tracking-tight leading-relaxed">
+<a class="text-[#516777] dark:text-[#a1a19a] hover:text-[#4c6545] transition-colors duration-500" href="dashboard.html">Dashboard</a>
+<a class="text-[#516777] dark:text-[#a1a19a] hover:text-[#4c6545] transition-colors duration-500" href="index.html">Journal</a>
+<a class="text-[#4c6545] dark:text-[#8A9A5B] font-semibold border-b-2 border-[#4c6545] pb-1" href="index.html">Portfolio</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer transition-colors" data-icon="settings">settings</span>
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer transition-colors" data-icon="notifications">notifications</span>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container border border-outline-variant/20">
+<img alt="Profile" class="w-full h-full object-cover grayscale brightness-110" data-alt="User profile portrait in warm sepia tones, professional and minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHz063Jn4YAJ5lSyYAKYqiMrZ2_Lrhy-Iy9ZKJZSctBK8cgfXhBrgc5wLj67jON3yP1bxcZzKHwLe467nOHVggILci-DEgc4TMhz0wIpY-hkKivGg0Chw1NdOp1uHmTY5TqpaHsTnJL-G6qtp9sFX_i2JbfIThAIUQP_ngLen5cHVgFpwC22QFNTa9lJsH_5EYskhCEF-fRiUFEdcNQwV3LA_gZi7dGiEOY7dIoaca3QlIEn-0aCc4i0jMcVwhMGB7EEeIO4VZa_kN"/>
+</div>
+</div>
+</div>
+<div class="bg-[#f4f1ea] dark:bg-[#2a2a27] h-[1px] w-full"></div>
+</header>
+<!-- Page Content -->
+<div class="px-12 py-16 max-w-6xl mx-auto">
+<!-- Hero Header -->
+<section class="mb-24 flex flex-col md:flex-row justify-between items-end gap-12">
+<div class="max-w-2xl">
+<h2 class="text-5xl font-headline tracking-tighter text-on-background mb-6 leading-tight">Mastering the Art <br/><span class="serif-italic text-secondary">of Purposeful Intent</span></h2>
+<p class="text-xl font-body leading-relaxed text-on-surface-variant/80">Life is not measured by the speed at which we move, but by the depth of the marks we leave. Curate your ambitions with the same care as a private collection.</p>
+</div>
+<div class="flex gap-4">
+<div class="p-4 bg-surface-container-low border-b border-primary/20">
+<span class="block text-2xl font-headline text-primary">Q3</span>
+<span class="block text-[10px] font-label uppercase tracking-widest text-outline">Current Quarter</span>
+</div>
+<div class="p-4 bg-surface-container-low border-b border-primary/20">
+<span class="block text-2xl font-headline text-primary">12</span>
+<span class="block text-[10px] font-label uppercase tracking-widest text-outline">Active Goals</span>
+</div>
+</div>
+</section>
+<!-- Areas of Life - Asymmetric Progress -->
+<section class="mb-32">
+<div class="flex justify-between items-center mb-12">
+<h3 class="font-label uppercase tracking-[0.25em] text-[12px] font-bold text-on-surface">Areas of Life</h3>
+<div class="w-32 h-[1px] bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Area 1 -->
+<div class="group cursor-pointer">
+<div class="relative h-64 mb-6 overflow-hidden bg-surface-container-high flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of a high-end luxury watch and vintage leather notebook on a polished dark wood desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGYZv515tOHVNHX-ZZmSj-Tr6ww8yR-TgbMHXPZsngQDjxGsrE_-HHSuts4c06Es4dqQTeWOvDOE5gFwmIP8i3w-4dRFJDjZkkYg0YNUsGf1C_OgnCda5m0ShoesGDr3plX1nBkNHwgoDHQJNCwAWjxmOSL7UH9yjfnu7kn8nCRdpb-f7kHOh6AUtCQWhdag5abwpkqVfKzrpyrZYsG5cu08sqStt27H6R3s2omHrMsVcCC-sGSCGxCDkyupCZlj0C3jRcqBY-9W_m"/>
+<div class="relative z-10 text-center">
+<span class="material-symbols-outlined text-3xl text-primary mb-2" data-icon="account_balance">account_balance</span>
+<span class="block font-headline text-2xl">Legacy &amp; Finance</span>
+</div>
+<div class="absolute bottom-0 left-0 h-1 bg-primary transition-all duration-700" style="width: 72%;"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">72% Completed</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-2 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</div>
+</div>
+<!-- Area 2 -->
+<div class="group cursor-pointer pt-12 md:pt-24">
+<div class="relative h-64 mb-6 overflow-hidden bg-surface-container-high flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:scale-105 transition-transform duration-700" data-alt="Sunlight streaming through tall windows into a minimalist yoga studio with linen textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVi5wptV658uRiPrQsErpnKU_ot4Rk_xVjh4vWbqPbevzqnIoudqYGDupC3bmNfXKHT5dj6bswj4FdeAnMOgcIdMGriQcNFTaS4Vtfxsr3qs_bBLzj_0SLgcOZJD3Izqa6rubTzqGuPVVV1OM68Ur4E44_Zuood-L7o2_gUhjwQ_Ys6u1mk5vs80JzMGo0nToYSBr6JUXDRbl00PEJOHhdTzK6aUTRI9muAkHC7KanxX25gv2KbZ2IzVUJOfdPzMEnmkx7Px4EMPq-"/>
+<div class="relative z-10 text-center">
+<span class="material-symbols-outlined text-3xl text-primary mb-2" data-icon="spa">spa</span>
+<span class="block font-headline text-2xl">Wellbeing</span>
+</div>
+<div class="absolute bottom-0 left-0 h-1 bg-primary transition-all duration-700" style="width: 45%;"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">45% Completed</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-2 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</div>
+</div>
+<!-- Area 3 -->
+<div class="group cursor-pointer">
+<div class="relative h-64 mb-6 overflow-hidden bg-surface-container-high flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:scale-105 transition-transform duration-700" data-alt="Stack of old leather bound books in a private library with soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkPVWK_Yz_8xyuxBfcjHZqkkMNKTZWpJO-oYuQTh7MIgMEx-71d50ptNQK_ebQaGYwFFWGedrTiZoADtfPoRRasSzePz8r970jdhJMj49BI5jqw9KG_aN3KZXSwchzoRNqelGNnMh5FrI5IMn9imJedtKRLe4dH8kqOhPkOcqg_4zrwvHcv2cEx_hSDFw4rANC9hz9MEdue4g88bvigdAu34YDMzVoc633_lx7Kzd7zD-hJQ5ZUJPQz0-PcM_-KDTnEl554_PBXz8r"/>
+<div class="relative z-10 text-center">
+<span class="material-symbols-outlined text-3xl text-primary mb-2" data-icon="auto_stories">auto_stories</span>
+<span class="block font-headline text-2xl">Intellect</span>
+</div>
+<div class="absolute bottom-0 left-0 h-1 bg-primary transition-all duration-700" style="width: 88%;"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">88% Completed</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-2 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</div>
+</div>
+<!-- Area 4 -->
+<div class="group cursor-pointer pt-12 md:pt-24">
+<div class="relative h-64 mb-6 overflow-hidden bg-surface-container-high flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:scale-105 transition-transform duration-700" data-alt="Glass of red wine on a marble table at dusk in a refined outdoor bistro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8s5vTBB7N-qMFePaaeBGq4US8i9A-NYN0-v8MWbKT9GLNOw0gKfBSx7LhbsBbd_7hPaOxIYP9nkaIx6PkXogBBuWq6Z14vDYbVAN7D8RVYRa5vckKIkpvRrVh2owyLc7_DEHeZjI44mWSRRRkuz0b5LyDy-VPHTtM1U5RKcZxb06HFgHM36zTjW68REEtP9y_JapBiem8syjenbF-keJnG9DRHE92B_9ckuRBiRtRlVZYQkqFGkF2KG64fkGw7HUrATvMcry1_-kn"/>
+<div class="relative z-10 text-center">
+<span class="material-symbols-outlined text-3xl text-primary mb-2" data-icon="celebration">celebration</span>
+<span class="block font-headline text-2xl">Social Life</span>
+</div>
+<div class="absolute bottom-0 left-0 h-1 bg-primary transition-all duration-700" style="width: 30%;"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">30% Completed</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-2 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Goal Breakdown - Bento/Asymmetric -->
+<section class="mb-32">
+<div class="flex flex-col md:flex-row gap-16 items-start">
+<!-- Left: Why it Matters -->
+<div class="w-full md:w-1/3 sticky top-32">
+<h4 class="font-headline text-3xl text-primary mb-8 italic">The Private Collection <br/>Expansion</h4>
+<div class="border-l border-primary-dim/30 pl-8 space-y-8">
+<div>
+<h5 class="text-[10px] font-label uppercase tracking-widest text-outline mb-2">The Philosophy</h5>
+<p class="text-on-surface-variant italic leading-relaxed text-sm">"To own beautiful things is a responsibility to their preservation. Curating an archive of rare manuscripts is not about possession, but about the stewardship of human thought."</p>
+</div>
+<div>
+<h5 class="text-[10px] font-label uppercase tracking-widest text-outline mb-2">Success Metric</h5>
+<p class="text-on-surface font-headline">A catalog of 100+ vetted 18th-century first editions, preserved in a climate-controlled environment.</p>
+</div>
+</div>
+</div>
+<!-- Right: Steps & Roadmap -->
+<div class="w-full md:w-2/3 space-y-12">
+<div class="bg-surface-container-low p-12 relative">
+<div class="absolute top-0 left-0 w-1 h-24 bg-primary"></div>
+<h4 class="font-headline text-2xl mb-12">Strategic Roadmap</h4>
+<div class="space-y-16">
+<!-- Step 1 -->
+<div class="flex gap-8 group">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 border border-primary text-primary flex items-center justify-center font-headline italic">01</div>
+<div class="flex-1 w-[1px] bg-outline-variant/30 mt-4"></div>
+</div>
+<div class="flex-1 pb-4">
+<div class="flex justify-between items-start mb-4">
+<h6 class="font-headline text-xl">Acquisition Research</h6>
+<span class="text-[10px] font-label bg-primary-container text-on-primary-container px-3 py-1 tracking-widest uppercase">Completed</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-lg mb-4">Identification of key auction houses in London and Paris. Establish relationships with specialized antiquarian booksellers.</p>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 text-outline text-[10px] uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs" data-icon="event">event</span> May 2024
+                                            </div>
+<div class="flex items-center gap-2 text-outline text-[10px] uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span> Paris
+                                            </div>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-8 group">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-headline italic">02</div>
+<div class="flex-1 w-[1px] bg-outline-variant/30 mt-4"></div>
+</div>
+<div class="flex-1 pb-4">
+<div class="flex justify-between items-start mb-4">
+<h6 class="font-headline text-xl">Environmental Setup</h6>
+<span class="text-[10px] font-label border border-outline-variant text-outline px-3 py-1 tracking-widest uppercase">In Progress</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-lg mb-4">Installation of museum-grade UV filtering and humidity stabilization in the West Wing library suite.</p>
+<div class="w-full bg-surface-container-high h-1 overflow-hidden mt-6">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-8 group opacity-50">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 border border-outline-variant text-outline-variant flex items-center justify-center font-headline italic">03</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-4">
+<h6 class="font-headline text-xl">Cataloging &amp; Vellum Binding</h6>
+<span class="text-[10px] font-label border border-outline-variant text-outline px-3 py-1 tracking-widest uppercase">Planned</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-lg">Formal documentation using archival-safe materials and commissioning bespoke vellum slipcases for the most fragile pieces.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Minimalist Grid - Secondary Goals -->
+<section class="mb-24">
+<div class="flex justify-between items-center mb-12">
+<h3 class="font-label uppercase tracking-[0.25em] text-[12px] font-bold text-on-surface">Ongoing Pursuits</h3>
+<div class="w-32 h-[1px] bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Goal Card 1 -->
+<div class="group border-b border-outline-variant/20 pb-8 hover:border-primary transition-colors duration-500">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="sailing">sailing</span>
+<span class="font-headline italic text-secondary text-sm">Active</span>
+</div>
+<h5 class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors">Transatlantic Voyage</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Navigating the classic route with a minimal crew, focusing on celestial navigation and ocean conservation research.</p>
+<div class="flex items-center justify-between text-[10px] font-label uppercase tracking-widest text-outline">
+<span>Success: Arrival at Port</span>
+<span>Est: Oct 2024</span>
+</div>
+</div>
+<!-- Goal Card 2 -->
+<div class="group border-b border-outline-variant/20 pb-8 hover:border-primary transition-colors duration-500">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="architecture">architecture</span>
+<span class="font-headline italic text-secondary text-sm">Drafting</span>
+</div>
+<h5 class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors">Sustainable Estate</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Redesigning the ancestral grounds to utilize geothermal energy and permaculture principles without altering the heritage facade.</p>
+<div class="flex items-center justify-between text-[10px] font-label uppercase tracking-widest text-outline">
+<span>Success: Net Zero Cert</span>
+<span>Est: 2026</span>
+</div>
+</div>
+<!-- Goal Card 3 -->
+<div class="group border-b border-outline-variant/20 pb-8 hover:border-primary transition-colors duration-500">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="language">language</span>
+<span class="font-headline italic text-secondary text-sm">Mastery</span>
+</div>
+<h5 class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors">Classical Latin Fluency</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Achieving the ability to read and translate Ovid and Virgil in their original form without modern digital assistance.</p>
+<div class="flex items-center justify-between text-[10px] font-label uppercase tracking-widest text-outline">
+<span>Success: Translation</span>
+<span>Est: ongoing</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Editorial Quote -->
+<section class="max-w-4xl mx-auto py-24 text-center border-y border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="format_quote">format_quote</span>
+<p class="text-4xl md:text-5xl font-headline italic leading-tight text-secondary mb-8">"Elegance is the only beauty that never fades, and a goal achieved with poise is a legacy created."</p>
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-[1px] bg-primary mb-2"></div>
+<span class="font-label uppercase tracking-[0.3em] text-[10px] text-on-surface-variant">The Curated Archive Editorial</span>
+</div>
+</section>
+</div>
+<!-- Footer / Mobile Nav (Shared Component Logic) -->
+<footer class="md:hidden sticky bottom-0 bg-surface-container-low border-t border-outline-variant/10 px-8 py-4 flex justify-around items-center z-50">
+<span class="material-symbols-outlined text-primary" data-icon="dashboard">dashboard</span>
+<span class="material-symbols-outlined text-primary" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="material-symbols-outlined text-secondary" data-icon="cached">cached</span>
+<span class="material-symbols-outlined text-secondary" data-icon="analytics">analytics</span>
+</footer>
+</main>
+</body></html>

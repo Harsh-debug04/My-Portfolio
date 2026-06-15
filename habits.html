@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Harshwardhan Pandey | Habit Tracker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#434843",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#7a7467",
+                        "surface-variant": "#e4e2dd",
+                        "inverse-surface": "#30312e",
+                        "surface-dim": "#dbdad5",
+                        "on-primary-fixed-variant": "#3d4a3d",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface-container-high": "#eae8e3",
+                        "surface": "#fbf9f4",
+                        "surface-container-highest": "#e4e2dd",
+                        "outline": "#747872",
+                        "primary": "#526051",
+                        "secondary-container": "#e4e2e1",
+                        "on-tertiary-fixed": "#1f1b12",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-primary-container": "#f7fff3",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f0eee9",
+                        "secondary-fixed": "#e4e2e1",
+                        "inverse-primary": "#bbcbb9",
+                        "secondary": "#5f5e5e",
+                        "outline-variant": "#c4c8c1",
+                        "tertiary": "#615b4f",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1b1c19",
+                        "inverse-on-surface": "#f2f1ec",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ebe1d2",
+                        "on-secondary-container": "#656464",
+                        "surface-tint": "#546254",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "background": "#fbf9f4",
+                        "primary-fixed": "#d7e7d5",
+                        "primary-container": "#6a7869",
+                        "on-primary-fixed": "#121e13",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#cec5b7",
+                        "on-tertiary-fixed-variant": "#4c463b",
+                        "on-background": "#1b1c19",
+                        "surface-bright": "#fbf9f4",
+                        "surface-container-low": "#f5f3ee",
+                        "primary-fixed-dim": "#bbcbb9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+        }
+        .grain-overlay {
+            pointer-events: none;
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed-dim">
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f4]/85 backdrop-blur-md border-b border-[#e4e2dd]/30 flex justify-between items-center px-12 py-6 w-full">
+<div class="font-serif text-xl tracking-[0.2em] uppercase text-[#1b1c19]">HARSHWARDHAN PANDEY</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="font-serif tracking-tight text-lg text-[#526051] border-b border-[#526051] pb-1" href="index.html">Collection</a>
+<a class="font-serif tracking-tight text-lg text-[#1b1c19]/60 hover:text-[#526051] transition-colors duration-400" href="archive.html">Legacy</a>
+<a class="font-serif tracking-tight text-lg text-[#1b1c19]/60 hover:text-[#526051] transition-colors duration-400" href="index.html">Archives</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-on-surface-variant">settings</button>
+<div class="w-8 h-8 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="Sophisticated portrait of a mature man in a charcoal wool coat with a neutral background and cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4EhOFxW7C-VZVteP7TJ8EcfQ8sEJJ7To6Z3irZo7e_PMNQuktZ5tqzvdWPo0d3RHcX7pQMTxJukO4js1cm_HpR5XI03W9KGLjfEbOM2b7B5Wk1jJAoefKYN7ZxF40Q6sMRqWQ8hUWxAblYg1xuc8LhQBgZziAbRk3L7kdl0Lv4u2tTy7rrc1cB7vFMYsowl57PLjlZp1xqhcboRyV0J5aD8YwMb9wwrOkVPK51_NwvuLfmznQUl0rcWCuA8xYKAXGgU3R3HxbVufz"/>
+</div>
+</div>
+</nav>
+<div class="flex min-h-screen pt-24">
+<aside class="hidden lg:flex flex-col h-[calc(100vh-6rem)] w-72 border-r border-[#e4e2dd] bg-[#f5f3ee] p-8 sticky top-24">
+<div class="font-serif text-2xl text-[#1b1c19] mb-8">The Atelier</div>
+<p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-12">Established 1924</p>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-4 px-4 py-3 bg-[#e4e2dd] text-[#1b1c19] font-medium border-l-4 border-[#526051] transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-serif text-sm">The Daily Ledger</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 text-[#1b1c19]/50 hover:bg-[#e4e2dd]/50 hover:translate-x-1 transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-serif text-sm">Aspirations</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 text-[#1b1c19]/50 hover:bg-[#e4e2dd]/50 hover:translate-x-1 transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-serif text-sm">Personal Library</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 text-[#1b1c19]/50 hover:bg-[#e4e2dd]/50 hover:translate-x-1 transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined" data-icon="card_membership">card_membership</span>
+<span class="font-serif text-sm">Private Membership</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 text-[#1b1c19]/50 hover:bg-[#e4e2dd]/50 hover:translate-x-1 transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+<span class="font-serif text-sm">Stewardship</span>
+</a>
+</nav>
+<button class="mt-8 w-full bg-primary text-on-primary py-4 font-serif tracking-wide text-sm hover:bg-primary-container transition-colors duration-400">
+                New Entry
+            </button>
+<div class="mt-12 pt-8 border-t border-outline-variant/30 space-y-4">
+<a class="flex items-center space-x-4 text-[#1b1c19]/50 hover:text-primary transition-colors" href="index.html">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span class="font-serif text-xs">Support</span>
+</a>
+<a class="flex items-center space-x-4 text-[#1b1c19]/50 hover:text-primary transition-colors" href="index.html">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+<span class="font-serif text-xs">Journal Settings</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 px-8 lg:px-16 py-12 max-w-7xl mx-auto overflow-hidden">
+<header class="mb-16">
+<h1 class="text-6xl font-headline font-bold text-on-surface tracking-tighter mb-4">Heritage Habit Tracker</h1>
+<p class="text-xl font-body italic text-secondary leading-relaxed max-w-2xl">Refined discipline leads to lasting legacy. Document your daily rituals with the precision they deserve.</p>
+</header>
+<div class="grid grid-cols-12 gap-8">
+<section class="col-span-12 lg:col-span-8 bg-surface-container-low p-12 relative overflow-hidden">
+<div class="grain-overlay"></div>
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-3xl font-headline font-semibold mb-2">Weekly Discipline</h2>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">November 13 — November 19, 2023</p>
+</div>
+<div class="flex space-x-4 text-xs font-label uppercase tracking-tighter text-on-surface-variant">
+<span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+</div>
+</div>
+<div class="space-y-10">
+<div class="flex items-center">
+<div class="w-1/3 pr-8 border-r border-outline-variant/30">
+<h3 class="text-lg font-headline">Deep Work Session</h3>
+<p class="text-xs font-label text-on-surface-variant italic">90 Minutes Focus</p>
+</div>
+<div class="flex-1 flex justify-between px-8">
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 border border-outline-variant"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 border border-outline-variant"></div>
+<div class="w-6 h-6 border border-outline-variant"></div>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-1/3 pr-8 border-r border-outline-variant/30">
+<h3 class="text-lg font-headline">Classical Study</h3>
+<p class="text-xs font-label text-on-surface-variant italic">History &amp; Philosophy</p>
+</div>
+<div class="flex-1 flex justify-between px-8">
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 border border-outline-variant"></div>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-1/3 pr-8 border-r border-outline-variant/30">
+<h3 class="text-lg font-headline">Physical Rigor</h3>
+<p class="text-xs font-label text-on-surface-variant italic">Strength &amp; Mobility</p>
+</div>
+<div class="flex-1 flex justify-between px-8">
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 border border-outline-variant"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 border border-outline-variant"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 border border-outline-variant"></div>
+<div class="w-6 h-6 border border-outline-variant"></div>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-1/3 pr-8 border-r border-outline-variant/30">
+<h3 class="text-lg font-headline">Reflective Journal</h3>
+<p class="text-xs font-label text-on-surface-variant italic">Daily Evening Review</p>
+</div>
+<div class="flex-1 flex justify-between px-8">
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+<div class="w-6 h-6 bg-primary"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="col-span-12 lg:col-span-4 space-y-8">
+<div class="bg-surface-container-highest p-8 border-l-4 border-tertiary">
+<h2 class="text-xl font-headline font-semibold mb-6">Momentum Meter</h2>
+<div class="relative pt-1">
+<div class="flex items-center justify-between mb-4">
+<div>
+<span class="text-xs font-label uppercase tracking-widest text-primary font-semibold py-1 px-2 bg-primary-fixed-dim">Mastery Level</span>
+</div>
+<div class="text-right">
+<span class="text-2xl font-headline font-bold text-primary">84%</span>
+</div>
+</div>
+<div class="overflow-hidden h-1 mb-4 flex bg-outline-variant/30">
+<div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-primary" style="width:84%"></div>
+</div>
+<p class="text-sm font-body italic text-secondary leading-snug">Current streak: 12 days. Your consistency in "Classical Study" is at an all-time peak.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 border-l-4 border-primary">
+<h2 class="text-xl font-headline font-semibold mb-6">Weekly Objectives</h2>
+<ul class="space-y-6">
+<li class="group">
+<div class="flex justify-between items-start mb-2">
+<span class="font-headline text-lg group-hover:text-primary transition-colors">Cognitive Legacy</span>
+<span class="material-symbols-outlined text-outline-variant">link</span>
+</div>
+<p class="text-xs font-label text-on-surface-variant uppercase tracking-tighter">Linked to: Deep Work, Study</p>
+</li>
+<li class="group">
+<div class="flex justify-between items-start mb-2">
+<span class="font-headline text-lg group-hover:text-primary transition-colors">Physical Sovereignty</span>
+<span class="material-symbols-outlined text-outline-variant">link</span>
+</div>
+<p class="text-xs font-label text-on-surface-variant uppercase tracking-tighter">Linked to: Physical Rigor</p>
+</li>
+</ul>
+</div>
+</section>
+<section class="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="col-span-1 md:col-span-2 bg-surface-container-low p-12">
+<h2 class="text-3xl font-headline font-semibold mb-12">Focus Analysis</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-4">
+<p class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant">Peak Performance Hours</p>
+<div class="h-48 flex items-end justify-between space-x-2">
+<div class="w-full bg-outline-variant/40 h-[20%]"></div>
+<div class="w-full bg-outline-variant/40 h-[35%]"></div>
+<div class="w-full bg-primary h-[85%]"></div>
+<div class="w-full bg-primary h-[100%]"></div>
+<div class="w-full bg-primary-container h-[70%]"></div>
+<div class="w-full bg-outline-variant/40 h-[40%]"></div>
+<div class="w-full bg-outline-variant/40 h-[25%]"></div>
+</div>
+<div class="flex justify-between font-label text-[10px] text-on-surface-variant uppercase tracking-widest pt-2 border-t border-outline-variant/30">
+<span>06:00</span><span>09:00</span><span>12:00</span><span>15:00</span>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<h4 class="text-sm font-label uppercase tracking-widest text-on-surface-variant mb-2">The Discipline Insight</h4>
+<p class="text-lg font-body italic leading-relaxed text-on-surface">"Consistency in morning Deep Work has historically predicted your most fruitful quarterly outcomes."</p>
+</div>
+<div class="pt-6 border-t border-outline-variant/30">
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">Entropy Warning</p>
+<p class="text-sm font-body text-secondary">Weekend physical rigor has dropped by 14% this cycle. Consider an early Sunday ritual.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-[#1b1c19] text-[#fbf9f4] p-12 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-2xl mb-4 italic">The Curated Detail</h3>
+<div class="w-12 h-px bg-tertiary-fixed-dim mb-8"></div>
+<p class="font-body text-xl leading-loose opacity-80 mb-8">Select a habit from your ledger to view deep longitudinal data and historical lineage of performance.</p>
+</div>
+<img class="w-full h-48 object-cover grayscale opacity-50" data-alt="Minimalist architectural detail of a sunlit stone staircase with deep shadows and clean geometric lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZwpS_nt3wpWgBfuMq8f3W9yi3GQPIrCr6o5wyZ0gwHSVJj5SzfFB_bVSfAA0BsG5oewhvSrjnwdo-cun7Px_UjNZid8ibbzPka1sfaLpIx6dZiUpKt75n_XieyHLTDJjQZq4M36V2tFKmGWQqp0v4wpcRidsEDrsLOoHGJFiNxom8rf77mR9xOHiLbZnMCffHA3Y2kxEgHLzucMA373IcPL7jPGofxlyhKJM-V-ioiadhcHVx0zS6s-WU31yt4ua7_6huYll2wQqm"/>
+</div>
+</section>
+</div>
+</main>
+</div>
+<footer class="mt-24 border-t border-outline-variant/30 bg-surface-container-low py-16 px-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start space-y-12 md:space-y-0">
+<div class="max-w-xs">
+<div class="font-serif text-lg tracking-[0.2em] uppercase text-[#1b1c19] mb-6">HARSHWARDHAN PANDEY</div>
+<p class="text-sm font-body italic text-secondary leading-relaxed">Dedicated to the preservation of excellence and the refinement of personal discipline since 1924.</p>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="space-y-4">
+<h5 class="text-xs font-label uppercase tracking-[0.2em] text-on-surface font-semibold">The Archive</h5>
+<ul class="text-sm font-body space-y-2 text-secondary">
+<li><a class="hover:text-primary transition-colors" href="index.html">Manifesto</a></li>
+<li><a class="hover:text-primary transition-colors" href="index.html">Curatorial Team</a></li>
+<li><a class="hover:text-primary transition-colors" href="index.html">Membership</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-xs font-label uppercase tracking-[0.2em] text-on-surface font-semibold">Legal</h5>
+<ul class="text-sm font-body space-y-2 text-secondary">
+<li><a class="hover:text-primary transition-colors" href="index.html">Privacy</a></li>
+<li><a class="hover:text-primary transition-colors" href="index.html">Terms of Use</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-outline-variant/10 flex justify-between items-center text-[10px] font-label uppercase tracking-widest text-on-surface-variant/60">
+<span>© 1924–2023 Harshwardhan Pandey Group. All rights reserved.</span>
+<span>Hand-crafted in London</span>
+</div>
+</footer>
+</body></html>

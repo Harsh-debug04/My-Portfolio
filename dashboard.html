@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heritage Dashboard | Harshwardhan Pandey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Newsreader:ital,wght@0,400;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#434843",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#7a7467",
+                        "surface-variant": "#e4e2dd",
+                        "inverse-surface": "#30312e",
+                        "surface-dim": "#dbdad5",
+                        "on-primary-fixed-variant": "#3d4a3d",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface-container-high": "#eae8e3",
+                        "surface": "#fbf9f4",
+                        "surface-container-highest": "#e4e2dd",
+                        "outline": "#747872",
+                        "primary": "#526051",
+                        "secondary-container": "#e4e2e1",
+                        "on-tertiary-fixed": "#1f1b12",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-primary-container": "#f7fff3",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f0eee9",
+                        "secondary-fixed": "#e4e2e1",
+                        "inverse-primary": "#bbcbb9",
+                        "secondary": "#5f5e5e",
+                        "outline-variant": "#c4c8c1",
+                        "tertiary": "#615b4f",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1b1c19",
+                        "inverse-on-surface": "#f2f1ec",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ebe1d2",
+                        "on-secondary-container": "#656464",
+                        "surface-tint": "#546254",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "background": "#fbf9f4",
+                        "primary-fixed": "#d7e7d5",
+                        "primary-container": "#6a7869",
+                        "on-primary-fixed": "#121e13",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#cec5b7",
+                        "on-tertiary-fixed-variant": "#4c463b",
+                        "on-background": "#1b1c19",
+                        "surface-bright": "#fbf9f4",
+                        "surface-container-low": "#f5f3ee",
+                        "primary-fixed-dim": "#bbcbb9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0rem",
+                        "xl": "0rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .grainy-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed antialiased overflow-x-hidden">
+<div class="fixed inset-0 grainy-bg z-0"></div>
+<div class="flex min-h-screen relative z-10">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen p-8 bg-[#f5f3ee] dark:bg-[#141512] w-72 border-r border-[#e4e2dd] dark:border-[#3c3d3a] sticky top-0">
+<div class="font-serif text-2xl text-[#1b1c19] dark:text-[#fbf9f4] mb-8">
+<div class="font-serif text-2xl mb-1">The Atelier</div>
+<div class="font-serif text-xs opacity-50 tracking-widest uppercase">Established 1924</div>
+</div>
+<div class="flex items-center gap-4 mb-10 pb-6 border-b border-outline-variant/30">
+<img class="w-12 h-12 object-cover grayscale" data-alt="Professional portrait of a sophisticated man in a dark tailored suit with a thoughtful expression and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoya1t6H3yOL4vFo7KaqiUKKNYTkV81RHSPPefu2XbvkycL7GE5tTh5l6LCGnW17FJBI9OvF99Pff0f_kvbvM9gxRLKD5APcCxkGh-mXCfm0IQRxFVlOfyDHd6wm0Rne6519cgFmHDRzA-ThhkksM9GQqWHHROekeTMh78FlNSS3qPFDRB-0EpK3M0GCFlNvW6t76fjCnu0Ro4U2K-mJtpmkV17AcfjrBwslLjD_kO7qX_qX1h6zgEKXnppJUhuOwVRLjwj0sOo1r1"/>
+<div>
+<div class="font-label text-xs uppercase tracking-widest opacity-60">Curator</div>
+<div class="font-headline font-bold text-sm">Patron Profile</div>
+</div>
+</div>
+<nav class="flex-grow space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 bg-[#e4e2dd] dark:bg-[#252623] text-[#1b1c19] dark:text-[#fbf9f4] font-medium border-l-4 border-[#526051] transition-all duration-300 ease-in-out" href="index.html">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="font-serif text-sm">The Daily Ledger</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#1b1c19]/50 dark:text-[#fbf9f4]/50 hover:bg-[#e4e2dd]/50 hover:translate-x-1 transition-all duration-300 ease-in-out" href="index.html">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-serif text-sm">Aspirations</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#1b1c19]/50 dark:text-[#fbf9f4]/50 hover:bg-[#e4e2dd]/50 hover:translate-x-1 transition-all duration-300 ease-in-out" href="index.html">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-serif text-sm">Personal Library</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#1b1c19]/50 dark:text-[#fbf9f4]/50 hover:bg-[#e4e2dd]/50 hover:translate-x-1 transition-all duration-300 ease-in-out" href="index.html">
+<span class="material-symbols-outlined">card_membership</span>
+<span class="font-serif text-sm">Private Membership</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#1b1c19]/50 dark:text-[#fbf9f4]/50 hover:bg-[#e4e2dd]/50 hover:translate-x-1 transition-all duration-300 ease-in-out" href="index.html">
+<span class="material-symbols-outlined">shield</span>
+<span class="font-serif text-sm">Stewardship</span>
+</a>
+</nav>
+<div class="mt-auto space-y-4">
+<button class="w-full py-4 bg-primary text-on-primary font-headline text-sm tracking-widest uppercase hover:bg-primary-container transition-colors duration-400">
+                    New Entry
+                </button>
+<div class="pt-6 space-y-2 border-t border-outline-variant/30">
+<a class="flex items-center gap-3 text-[#1b1c19]/50 dark:text-[#fbf9f4]/50 text-xs font-serif hover:text-primary transition-colors" href="index.html">
+<span class="material-symbols-outlined">help_outline</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 text-[#1b1c19]/50 dark:text-[#fbf9f4]/50 text-xs font-serif hover:text-primary transition-colors" href="index.html">
+<span class="material-symbols-outlined">tune</span>
+<span>Journal Settings</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- TopNavBar (Shared) -->
+<header class="fixed top-0 right-0 left-0 md:left-72 z-50 flex justify-between items-center px-12 py-6 bg-[#fbf9f4]/85 dark:bg-[#1b1c19]/85 backdrop-blur-md border-b border-[#e4e2dd]/30 dark:border-[#3c3d3a]/30">
+<div class="font-serif text-xl tracking-[0.2em] uppercase text-[#1b1c19] dark:text-[#fbf9f4]">
+                    HARSHWARDHAN PANDEY
+                </div>
+<div class="hidden lg:flex gap-10">
+<a class="font-serif tracking-tight text-lg text-[#1b1c19]/60 dark:text-[#fbf9f4]/60 hover:text-[#526051] transition-colors duration-400" href="index.html">Collection</a>
+<a class="font-serif tracking-tight text-lg text-[#1b1c19]/60 dark:text-[#fbf9f4]/60 hover:text-[#526051] transition-colors duration-400" href="archive.html">Legacy</a>
+<a class="font-serif tracking-tight text-lg text-[#1b1c19]/60 dark:text-[#fbf9f4]/60 hover:text-[#526051] transition-colors duration-400" href="index.html">Archives</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#526051]">settings</button>
+<div class="w-8 h-8 bg-surface-container-highest border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="Close up of a classic wristwatch on a mahogany desk with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCceb1iyNwJhkQRJ5R1sig4DT4VEhoClmEd5zySMjRwdoND0qeFGlUIBwc6JDAN0G02UgbyY-QvMcKclXii7U-PL7GRNs6Cbo5_doWh0XaZTTnuUXn8MB7iI7aNxqoTJXIIqRTdMG81O3LiLgOQYP4QMqK-NvY4iN3ETQI9ypeLMMX_JyooaCWmmKvwzqA5bQEkcCLO9j_Ov89kLRWF1ArbfAf62in7zcqHBoy4rk9CIBBn2YIywirnptMzgSHZ2cvkTNpgwjaVEs8J"/>
+</div>
+</div>
+</header>
+<div class="pt-28 px-12 pb-24 max-w-7xl mx-auto">
+<!-- Daily Ledger Summary -->
+<section class="mb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7">
+<div class="font-label text-sm uppercase tracking-[0.3em] text-primary mb-4">Monday, October 14th, 2024</div>
+<h1 class="font-headline text-6xl lg:text-7xl font-bold tracking-tight mb-8">Good Morning, Curator.</h1>
+<blockquote class="border-l-2 border-primary pl-8 py-2">
+<p class="font-body text-2xl italic text-on-surface-variant leading-relaxed italic">"Quality is not an act, it is a habit. Excellence is found in the stillness between the notes."</p>
+<cite class="block font-label text-xs uppercase tracking-widest mt-4 opacity-60">— The Ledger of Intent</cite>
+</blockquote>
+</div>
+<div class="lg:col-span-5 flex justify-end">
+<div class="w-full h-64 relative bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist study with open journals, a fountain pen, and soft morning light streaming through a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS12FKCB0IjC52ZKNH1lWY5v0nOcRFSjccsRkwYPi4AS4w9Nw0Y3vvbDOABHeCgZRxsOwIckFis78QRHzTKql3z512qP8tYV0u-nWrgJVthbTMO-Xa0RkDNzUGQD6beTvqbwUEdsYbfDKnv0kXJDTgnMMVpIu2n_dvvGHAkgrV9ysyPZLYjy3zmlzH-ZAOIrQqt8tT4LR6YaYiXQvAQmxVyepFx-1Fz0VAiPHq0jYQtYkfUq1UmlQl1gxUc2ZqXsxtPF3UcAxsinVJ"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Atelier Focus Area -->
+<div class="lg:col-span-8 space-y-16">
+<div class="bg-surface-container-low p-12 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-tertiary"></div>
+<div class="flex justify-between items-start mb-10">
+<div>
+<span class="font-label text-xs uppercase tracking-[0.2em] opacity-60 block mb-2">Today's Mandate</span>
+<h2 class="font-headline text-3xl font-bold">Atelier Focus</h2>
+</div>
+<span class="material-symbols-outlined text-primary scale-150" data-weight="fill">auto_awesome</span>
+</div>
+<div class="space-y-8">
+<div class="group cursor-pointer">
+<div class="flex justify-between items-baseline mb-4">
+<h3 class="font-headline text-xl text-on-surface">Curate the Quarterly Archives</h3>
+<span class="font-label text-xs uppercase tracking-widest text-primary">In Progress</span>
+</div>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-6">Meticulously review the physical ledgers from Q3 and digitize the key stewardship insights for the board of trustees.</p>
+<div class="h-[2px] w-full bg-outline-variant/30 overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Strategic Roadmap -->
+<section>
+<div class="flex items-center justify-between mb-10">
+<h2 class="font-headline text-3xl font-bold">Strategic Roadmap</h2>
+<div class="h-px flex-grow mx-8 bg-outline-variant/30"></div>
+<button class="font-label text-xs uppercase tracking-widest text-primary border-b border-primary-fixed-dim hover:border-primary transition-all">View Full Horizon</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-high p-8 group hover:bg-surface-container-highest transition-colors duration-400">
+<div class="font-label text-xs text-primary mb-6">OCT 16</div>
+<h4 class="font-headline font-bold mb-4">Patron Gala Prep</h4>
+<p class="font-body text-sm text-on-surface-variant">Finalize guest list and menu for the Heritage Foundation annual evening.</p>
+</div>
+<div class="bg-surface-container-high p-8 group hover:bg-surface-container-highest transition-colors duration-400">
+<div class="font-label text-xs text-primary mb-6">OCT 18</div>
+<h4 class="font-headline font-bold mb-4">Library Acquisition</h4>
+<p class="font-body text-sm text-on-surface-variant">Awaiting 1st edition arrival from the London Antiquarian Society.</p>
+</div>
+<div class="bg-surface-container-high p-8 group hover:bg-surface-container-highest transition-colors duration-400">
+<div class="font-label text-xs text-primary mb-6">OCT 21</div>
+<h4 class="font-headline font-bold mb-4">Stewardship Audit</h4>
+<p class="font-body text-sm text-on-surface-variant">Quarterly review of physical asset maintenance and preservation.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Ritual Progress Sidebar -->
+<aside class="lg:col-span-4">
+<div class="sticky top-32 space-y-12">
+<div>
+<h3 class="font-headline text-2xl font-bold mb-8">Ritual Progress</h3>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<div class="w-6 h-6 border border-primary flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<span class="font-serif text-lg block">Morning Reflection</span>
+<span class="font-label text-[10px] uppercase tracking-widest opacity-50">Completed 06:30 AM</span>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-6 h-6 border border-outline mt-1"></div>
+<div>
+<span class="font-serif text-lg block">Deep Work (4 Hours)</span>
+<span class="font-label text-[10px] uppercase tracking-widest opacity-50">Scheduled for 09:00 AM</span>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-6 h-6 border border-outline mt-1"></div>
+<div>
+<span class="font-serif text-lg block">Curator Review</span>
+<span class="font-label text-[10px] uppercase tracking-widest opacity-50">Evening Ritual</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-tertiary text-on-tertiary p-10">
+<span class="material-symbols-outlined mb-6 text-tertiary-fixed">shield</span>
+<h4 class="font-headline text-xl mb-4">Foundation Status</h4>
+<p class="font-body text-sm opacity-80 leading-relaxed mb-6">Your stewardship metrics are currently outperforming the historical average by 12% this cycle.</p>
+<button class="font-label text-xs uppercase tracking-widest border-b border-on-tertiary pb-1">Review Analytics</button>
+</div>
+</div>
+</aside>
+</div>
+<!-- The Curated Archive -->
+<section class="mt-32">
+<div class="flex items-baseline justify-between mb-12">
+<div>
+<h2 class="font-headline text-4xl font-bold mb-2">The Curated Archive</h2>
+<p class="font-body text-on-surface-variant italic">Refined insights from recent historical entries.</p>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:border-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:border-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Archive Item 1 -->
+<div class="group flex flex-col bg-surface-container-low overflow-hidden cursor-pointer">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of antique leather-bound books on a shelf with gold leaf lettering and dusty atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi4ZuqjsajTsVw6mw7cu3dqxugQzFbYtrsVp_y5gK1MYXl5YD-UcWR5m1BK5srZQ9G1dVozueSMXGm6wzaVJf_hAlhdj6tb1BovEHQvER8lUf5MSVK-qGcpMT4XudJSjJNcj36u4D4kjRPuTzNmXjZHzSEHwoqln2fRXA1IgI5Sr5V8h0cv4fJEkAUILKqA5nV4pCsih9GYaDr9e9z5nHKhgFhl_6VwBExWxCqEA3iciQjmNHJzzQmR6bCTQXhNJIl-7LjI6A9E4s_"/>
+</div>
+<div class="p-10 flex-grow">
+<div class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-4">Volume IV | Issue 12</div>
+<h3 class="font-headline text-2xl font-bold mb-4">The Preservation of Intention</h3>
+<p class="font-body text-on-surface-variant line-clamp-3 mb-8">An exploration into the architectural philosophy of mid-century ateliers and their influence on modern workflow hierarchies...</p>
+<div class="flex justify-between items-center pt-6 border-t border-outline-variant/20">
+<span class="font-label text-xs opacity-50 italic">October 12, 2024</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Archive Item 2 -->
+<div class="group flex flex-col bg-surface-container-low overflow-hidden cursor-pointer">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale" data-alt="Black and white top view of a classic Leica camera on a minimal light gray surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhIbQHk78tJ5uZ5uGcOxp1GmUpHoheQAS60U0LM0QeXQqsMQ3hTbE8hVIwYiYvl1SeOnziWcVJWRY_AuJd1yJ1tKmvHoIvI3GYMeJyeyORg9W3m1OSN9gI18UZy-szYrorEMoHnv4zaUZWRovbtCxnHdtpQNGzYXr3R5xbGenvw6Z6R_vNCYrvASxuEwg8o3ifnjNeMWwuPyArQvnDfqaG1JBFTE5ppUoLAUzFFIg3gnuC43GjUck-tSFBETD-JEA2I4iTxZnbKbF6"/>
+</div>
+<div class="p-10 flex-grow">
+<div class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-4">Volume IV | Issue 11</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Visual Heritage: The Lens of History</h3>
+<p class="font-body text-on-surface-variant line-clamp-3 mb-8">Capturing the essence of permanent objects through the discipline of slow photography and manual development techniques...</p>
+<div class="flex justify-between items-center pt-6 border-t border-outline-variant/20">
+<span class="font-label text-xs opacity-50 italic">October 09, 2024</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Archive Item 3 -->
+<div class="group flex flex-col bg-surface-container-low overflow-hidden cursor-pointer">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Sleek glass carafe with sparkling water and a single sprig of mint on a marble table with bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfH1pblvxAhDu7eFOOAli_Pz1IQEesvUjg4EJxBSUOfD_N4ZTFCJSb0hrKKhSxN2sVgRuzBsU71NVEjbc1BNQfvDCsLoaSane4yN3gX87cWpOVZeUdFi5YeQMPuODeOAIofJpkWFPyzkJqdY-kj-uPpdnYJBdwtiOzl65yE5NYW9181zGHv06z9Ae0LmF72hPSAQlkRPnuIYrCxlutSfJwv2htStWsOaLTZafjj-BbhzL9B8xy4El7wyyPdb7NdBO6zC4yYBILLgfH"/>
+</div>
+<div class="p-10 flex-grow">
+<div class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-4">Volume IV | Issue 09</div>
+<h3 class="font-headline text-2xl font-bold mb-4">The Ritual of Stillness</h3>
+<p class="font-body text-on-surface-variant line-clamp-3 mb-8">Redefining productivity as a series of mindful pauses rather than a continuous stream of output. Lessons from the Masters...</p>
+<div class="flex justify-between items-center pt-6 border-t border-outline-variant/20">
+<span class="font-label text-xs opacity-50 italic">October 05, 2024</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Meta -->
+<footer class="px-12 py-16 bg-surface-container-low border-t border-outline-variant/30 text-center">
+<div class="font-serif text-sm tracking-widest uppercase opacity-40 mb-4">Curated by Harshwardhan Pandey</div>
+<div class="font-label text-[10px] tracking-[0.5em] uppercase opacity-30">All Rights Reserved © 2024</div>
+</footer>
+</main>
+</div>
+<!-- Mobile Nav Anchor -->
+<nav class="md:hidden fixed bottom-0 w-full bg-surface border-t border-outline-variant/30 flex justify-around p-4 z-50">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+<span class="material-symbols-outlined text-on-surface/40">auto_awesome</span>
+<span class="material-symbols-outlined text-on-surface/40">menu_book</span>
+<span class="material-symbols-outlined text-on-surface/40">shield</span>
+</nav>
+</body></html>

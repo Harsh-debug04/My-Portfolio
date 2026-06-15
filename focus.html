@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deep Focus | The Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#405839",
+                        "surface-container-low": "#fcf9f3",
+                        "outline-variant": "#babab0",
+                        "on-error-container": "#742410",
+                        "surface-bright": "#fffcf7",
+                        "tertiary-fixed": "#f4eedb",
+                        "secondary": "#516777",
+                        "error-dim": "#5c1202",
+                        "primary-container": "#ceebc2",
+                        "surface-container-high": "#f0eee5",
+                        "inverse-primary": "#e2ffd5",
+                        "on-secondary": "#ffffff",
+                        "primary-dim": "#41593a",
+                        "error-container": "#fe8b70",
+                        "tertiary-container": "#f4eedb",
+                        "secondary-fixed-dim": "#c0d8ea",
+                        "on-background": "#383831",
+                        "background": "#fffcf7",
+                        "primary-fixed": "#ceebc2",
+                        "on-secondary-container": "#3e5464",
+                        "tertiary": "#686456",
+                        "surface-variant": "#eae8de",
+                        "surface-tint": "#4c6545",
+                        "on-surface": "#383831",
+                        "on-secondary-fixed-variant": "#485e6e",
+                        "primary-fixed-dim": "#c0dcb5",
+                        "on-primary-fixed-variant": "#496242",
+                        "secondary-fixed": "#cee6f8",
+                        "secondary-dim": "#455b6b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#666354",
+                        "on-surface-variant": "#65655c",
+                        "surface": "#fffcf7",
+                        "surface-container": "#f6f4ec",
+                        "inverse-on-surface": "#9e9d98",
+                        "secondary-container": "#cee6f8",
+                        "on-primary": "#e6ffda",
+                        "outline": "#818178",
+                        "inverse-surface": "#0e0e0c",
+                        "surface-dim": "#e4e3d7",
+                        "primary": "#4c6545",
+                        "tertiary-fixed-dim": "#e5dfce",
+                        "on-primary-fixed": "#2e4528",
+                        "tertiary-dim": "#5c584a",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#eae8de",
+                        "on-tertiary-fixed": "#494639",
+                        "on-secondary-fixed": "#2c4251",
+                        "on-tertiary-container": "#5c584b",
+                        "error": "#a54731"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+        .ghost-border { border-bottom: 1px solid rgba(186, 186, 176, 0.2); }
+        .ghost-border:focus-within { border-bottom: 2px solid #4c6545; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<div class="flex min-h-screen">
+<!-- SideNavBar Component -->
+<aside class="hidden md:flex flex-col h-screen w-72 left-0 top-0 bg-[#f2f0ea] dark:bg-stone-900 py-12 px-8 fixed z-50 opacity-60 hover:opacity-100 transition-opacity duration-500">
+<div class="mb-12">
+<div class="font-serif text-lg text-[#383831] mb-1">Curated Archive</div>
+<div class="font-['Manrope'] uppercase tracking-widest text-[10px] text-[#8A9A5B]">Est. MMXXIV</div>
+</div>
+<nav class="flex-grow space-y-8">
+<a class="flex items-center gap-4 text-[#8A9A5B] hover:translate-x-1 transition-transform duration-300 font-['Manrope'] uppercase tracking-widest text-xs" href="index.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-4 text-[#8A9A5B] hover:translate-x-1 transition-transform duration-300 font-['Manrope'] uppercase tracking-widest text-xs" href="index.html">
+<span class="material-symbols-outlined" data-icon="auto_heritage">auto_stories</span>
+                    Legacy
+                </a>
+<a class="flex items-center gap-4 text-[#8A9A5B] hover:translate-x-1 transition-transform duration-300 font-['Manrope'] uppercase tracking-widest text-xs" href="index.html">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                    Ledger
+                </a>
+<a class="flex items-center gap-4 text-[#8A9A5B] hover:translate-x-1 transition-transform duration-300 font-['Manrope'] uppercase tracking-widest text-xs" href="index.html">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+                    Archive
+                </a>
+<a class="flex items-center gap-4 text-[#383831] dark:text-stone-100 font-bold hover:translate-x-1 transition-transform duration-300 font-['Manrope'] uppercase tracking-widest text-xs" href="index.html">
+<span class="material-symbols-outlined" data-icon="center_focus_strong">center_focus_strong</span>
+                    Focus
+                </a>
+</nav>
+<button class="mt-auto bg-primary text-on-primary py-3 px-6 text-xs uppercase tracking-widest font-bold shadow-sm">
+                New Entry
+            </button>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-grow md:ml-72 flex flex-col min-h-screen">
+<!-- TopNavBar Component -->
+<header class="flex justify-between items-center w-full px-12 py-8 bg-[#fffcf7] dark:bg-stone-950 opacity-40 hover:opacity-100 transition-opacity duration-500">
+<div class="text-2xl font-serif tracking-tighter text-[#383831] dark:text-stone-100">The Atelier</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-[#8A9A5B]/70 font-['Noto_Serif'] tracking-tight hover:text-[#383831] transition-colors duration-500" href="dashboard.html">Dashboard</a>
+<a class="text-[#8A9A5B]/70 font-['Noto_Serif'] tracking-tight hover:text-[#383831] transition-colors duration-500" href="archive.html">Legacy</a>
+<a class="text-[#8A9A5B]/70 font-['Noto_Serif'] tracking-tight hover:text-[#383831] transition-colors duration-500" href="ledger.html">Ledger</a>
+<a class="text-[#8A9A5B]/70 font-['Noto_Serif'] tracking-tight hover:text-[#383831] transition-colors duration-500" href="index.html">Archive</a>
+<a class="text-[#383831] dark:text-stone-100 border-b border-[#383831] pb-1 font-['Noto_Serif'] tracking-tight" href="focus.html">Focus</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#8A9A5B]" data-icon="settings">settings</span>
+<div class="w-10 h-10 overflow-hidden rounded-full border border-outline-variant/30">
+<img alt="User profile in high-end linen suit" class="w-full h-full object-cover" data-alt="Close up portrait of a refined man in a cream-colored high-end linen suit looking thoughtfully off-camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWmYCQxZ2vCriRaAKORCJxPqcKMkzA7jGVEy8p_mrXf_AkVcz0zmUxGhdkOYJFjxPIUIgUJD90NqGmkRN3yQMqTsYSr_KvmNohIrs5akhZgzZHTx_MgbgqbOzFzKlSt5gzaHhy7nDsGxVsIEUQG-AimM0MjDiDy-eucJX39gMSaXMozC1l_z-lZUTuXYxoHsJKMCqF5f9poJ8C1DCffKEXx3WLc76ZZio5Mhzl7UbpX6XAC6Ck8h3Y8Rk9wq0IGE9k_03WmTWWZlam"/>
+</div>
+</div>
+</header>
+<!-- Deep Focus Canvas -->
+<div class="flex-grow px-12 py-16 max-w-7xl mx-auto w-full flex flex-col md:flex-row gap-20">
+<!-- Left Column: Context & Sub-tasks -->
+<div class="md:w-1/3 flex flex-col space-y-16">
+<!-- Ambition Header -->
+<section>
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant/70 mb-4 block">Current Ambition</span>
+<h1 class="text-4xl text-on-background leading-tight">Mastering Historical Typography</h1>
+<p class="mt-6 text-on-surface-variant font-body text-sm leading-relaxed max-w-xs italic">
+                            "The curve of a serif holds the weight of a thousand years."
+                        </p>
+</section>
+<!-- High Impact Sub-tasks -->
+<section class="space-y-8">
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant/70 block mb-6">Session Milestones</span>
+<div class="space-y-6">
+<div class="flex items-center gap-4 group">
+<div class="w-2 h-2 rounded-full border border-primary group-hover:bg-primary transition-colors"></div>
+<span class="text-body text-on-surface font-medium">Deconstruct 18th-century ligatures</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-2 h-2 rounded-full border border-primary group-hover:bg-primary transition-colors"></div>
+<span class="text-body text-on-surface font-medium">Drafting the 'Avenue' majuscule</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-2 h-2 rounded-full border border-primary group-hover:bg-primary transition-colors"></div>
+<span class="text-body text-on-surface font-medium">Calibrating stem-to-hairline ratios</span>
+</div>
+</div>
+</section>
+<!-- Contextual Imagery -->
+<div class="mt-auto pt-8">
+<img alt="Luxury fountain pen and ink well" class="w-full h-48 object-cover rounded-sm border border-outline-variant/10 shadow-sm opacity-80" data-alt="Elegant macro shot of a gold-nibbed fountain pen resting on cream-colored textured paper with a vintage glass inkwell nearby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-wW2W4-OfWsf0eJqmysqkgfW2OpADDUbHVkuFufNDP_3qfNfs5jtvomPUk9tp-DDdrE758j5_aGOcZ-gpf5K89e47lLtgbYDUiG4O0EFXgesK4OaBKavef24mexVkLFuctr3hqqyp9vf6_xuxSc4mVw7iWnySVxRTghpOiDj0BioWhepl9WQSAQoXWM5Pd9ErZtUluXBpsdDf7AygO0SbcCA-a4LqAl08dgaJsJr4ORzkhY6-5NEKVuf7WOuH72utWf8fNtFGkzKp"/>
+</div>
+</div>
+<!-- Center/Right: The Timer & Reflections -->
+<div class="md:w-2/3 flex flex-col items-center">
+<!-- Progress Ring / Timer -->
+<div class="relative w-[400px] h-[400px] flex items-center justify-center mb-20">
+<!-- Background Circle -->
+<svg class="absolute inset-0 w-full h-full -rotate-90">
+<circle class="text-surface-variant/50" cx="200" cy="200" fill="transparent" r="180" stroke="currentColor" stroke-width="1.5"></circle>
+<!-- Progress Stroke -->
+<circle class="text-primary transition-all duration-1000 ease-in-out" cx="200" cy="200" fill="transparent" r="180" stroke="currentColor" stroke-dasharray="1130" stroke-dashoffset="340" stroke-width="3"></circle>
+</svg>
+<div class="text-center">
+<div class="text-7xl font-headline font-light tracking-tighter text-on-background mb-2">42:15</div>
+<div class="text-[10px] uppercase tracking-[0.3em] text-primary-dim font-bold">Flow Phase</div>
+</div>
+<!-- Secondary Float Detail -->
+<div class="absolute -bottom-4 right-12 bg-surface-container-low px-4 py-2 rounded-full shadow-sm border border-outline-variant/10 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-primary" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Optimal Vibe</span>
+</div>
+</div>
+<!-- Reflections Section -->
+<div class="w-full bg-surface-container-low p-10 shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-xl text-on-background">Immediate Reflections</h2>
+<p class="text-xs font-label uppercase tracking-widest text-on-surface-variant/60 mt-1">Fleeting Thoughts during focus</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="edit_note">edit_note</span>
+</div>
+<div class="space-y-6">
+<div class="ghost-border py-2 flex items-center justify-between">
+<input class="bg-transparent border-none focus:ring-0 w-full text-body text-on-surface italic placeholder:text-on-surface-variant/40" placeholder="Add a fleeting thought..." type="text"/>
+<span class="material-symbols-outlined text-primary text-sm cursor-pointer" data-icon="add">add</span>
+</div>
+<div class="flex gap-4 items-start py-2 group">
+<span class="text-[10px] text-outline-variant font-mono mt-1">09:42</span>
+<p class="text-sm text-on-surface italic border-l-2 border-primary-container pl-4">The way the light hits the paper reminds me of the Bodoni archives in Parma...</p>
+</div>
+</div>
+</div>
+<!-- Asymmetric Context Image -->
+<div class="grid grid-cols-2 gap-8 w-full mt-16">
+<div class="h-64 relative overflow-hidden group">
+<img alt="Quiet library corner" class="w-full h-full object-cover rounded-sm opacity-90 transition-transform duration-500 group-hover:scale-105" data-alt="Interior of a prestigious quiet library with dark wood bookshelves, a green shaded lamp, and dust motes dancing in sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmmj1uKvebTn6llgnjFkmvvxR6Lvo2pvi73A3GVoLrD53N15ommismghuFANZeDo0ZqYEoxrngaX5YOXHUeFuVxxkqz-osQby_cNZ80iYQaC4XWiFxu_eV-UBm68I2RPmf2NHLPk4DzmcWGNm1sefvibg8yaSwIS7Jd0X6eUE1bfqqPiswuFabsIU7ypLO_1LBME_qHvRTesNJhRHnqWZAR0f3voNpH2hP0gipbQ4CIuMNivb4akO8hY-w_aja4-s2nNA__DzFP2Ka"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="flex flex-col justify-center p-8 bg-surface-container-high/40">
+<h3 class="text-lg mb-4 italic leading-relaxed">"True luxury is the ability to ignore everything but the essential."</h3>
+<div class="w-12 h-[1px] bg-outline"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Background Decoration -->
+<div class="fixed inset-0 pointer-events-none z-[-1] opacity-[0.03] overflow-hidden">
+<svg height="100%" width="100%">
+<pattern height="100" id="grain" patternunits="userSpaceOnUse" width="100">
+<rect fill="transparent" height="100" width="100"></rect>
+<circle cx="1" cy="1" fill="#383831" r="0.5"></circle>
+<circle cx="20" cy="40" fill="#383831" r="0.5"></circle>
+<circle cx="80" cy="10" fill="#383831" r="0.5"></circle>
+<circle cx="50" cy="90" fill="#383831" r="0.5"></circle>
+</pattern>
+<rect fill="url(#grain)" height="100%" width="100%"></rect>
+</svg>
+</div>
+</body></html>
