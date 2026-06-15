@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Habit Tracker - New Entry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#405839",
+                    "surface-container-low": "#fcf9f3",
+                    "outline-variant": "#babab0",
+                    "on-error-container": "#742410",
+                    "surface-bright": "#fffcf7",
+                    "tertiary-fixed": "#f4eedb",
+                    "secondary": "#516777",
+                    "error-dim": "#5c1202",
+                    "primary-container": "#ceebc2",
+                    "surface-container-high": "#f0eee5",
+                    "inverse-primary": "#e2ffd5",
+                    "on-secondary": "#ffffff",
+                    "primary-dim": "#41593a",
+                    "error-container": "#fe8b70",
+                    "tertiary-container": "#f4eedb",
+                    "secondary-fixed-dim": "#c0d8ea",
+                    "on-background": "#383831",
+                    "background": "#fffcf7",
+                    "primary-fixed": "#ceebc2",
+                    "on-secondary-container": "#3e5464",
+                    "tertiary": "#686456",
+                    "surface-variant": "#eae8de",
+                    "surface-tint": "#4c6545",
+                    "on-surface": "#383831",
+                    "on-secondary-fixed-variant": "#485e6e",
+                    "primary-fixed-dim": "#c0dcb5",
+                    "on-primary-fixed-variant": "#496242",
+                    "secondary-fixed": "#cee6f8",
+                    "secondary-dim": "#455b6b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#666354",
+                    "on-surface-variant": "#65655c",
+                    "surface": "#fffcf7",
+                    "surface-container": "#f6f4ec",
+                    "inverse-on-surface": "#9e9d98",
+                    "secondary-container": "#cee6f8",
+                    "on-primary": "#e6ffda",
+                    "outline": "#818178",
+                    "inverse-surface": "#0e0e0c",
+                    "surface-dim": "#e4e3d7",
+                    "primary": "#4c6545",
+                    "tertiary-fixed-dim": "#e5dfce",
+                    "on-primary-fixed": "#2e4528",
+                    "tertiary-dim": "#5c584a",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#eae8de",
+                    "on-tertiary-fixed": "#494639",
+                    "on-secondary-fixed": "#2c4251",
+                    "on-tertiary-container": "#5c584b",
+                    "error": "#a54731"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Noto Serif"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Manrope"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .wax-seal-shadow {
+            box-shadow: 0 4px 20px rgba(165, 71, 49, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<div class="min-h-screen flex items-center justify-center p-6 md:p-12 lg:p-24 bg-surface-container">
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdKz2K_K6slNhL5eBwznY4WLOj_e4wXD24Z997Nf2Gk0VLo77FFtcprWOgJFjemfhoqq4mfoUMwl5lrA8LE1Y7tAxTs47UDTj-8NBSVd_x9EI3jxkzQMWuHEf9J9dyhDPCT24ntNR_nsyj6fe4lFtlPR5JHh60hwUtpHy31638P4BorN6QVH4aYTzG-E3nW16Py66vbhu8Qs_esXoUwQRGKWCXXzUxcz-8um0TBM-iLiYJdROBreb69Mz8zV6rJyyEM69ygXsZhMzv');"></div>
+<article class="relative w-full max-w-3xl bg-surface-bright p-10 md:p-20 border border-outline-variant/10 shadow-2xl rounded-sm overflow-hidden">
+<header class="mb-16 text-center">
+<div class="flex justify-between items-start mb-12">
+<a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</a>
+<div class="text-right">
+<p class="font-label text-xs uppercase tracking-[0.2em] text-outline mb-1">Vol. XXIV — No. 12</p>
+<p class="font-headline italic text-secondary text-lg">December 14th, 2024</p>
+</div>
+</div>
+<h1 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-on-surface mb-4">Daily Journal Entry</h1>
+<div class="w-16 h-[1px] bg-outline-variant mx-auto mb-4"></div>
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-on-surface-variant">Intention • Stewardship • Legacy</p>
+</header>
+<form class="space-y-16">
+<section>
+<label class="block font-headline text-2xl text-on-surface mb-6 border-b border-outline-variant/20 pb-2">
+                        What did you accomplish today?
+                    </label>
+<textarea class="w-full bg-transparent border-none focus:ring-0 font-body text-lg leading-relaxed text-on-surface-variant placeholder:text-outline-variant/50 p-0 resize-none" placeholder="Begin your transcription..." rows="6"></textarea>
+<div class="flex gap-4 mt-4 text-outline-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary" data-icon="format_quote">format_quote</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary" data-icon="format_list_bulleted">format_list_bulleted</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary" data-icon="image">image</span>
+</div>
+</section>
+<section>
+<label class="block font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-8">Ritual Check-ins<!--"label-->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-12">
+<label class="group flex items-center cursor-pointer space-x-4">
+<div class="relative w-5 h-5 border border-outline group-hover:border-primary transition-colors duration-300 flex items-center justify-center rounded-sm">
+<input class="absolute opacity-0 w-full h-full cursor-pointer peer" type="checkbox"/>
+<div class="w-2 h-2 bg-primary opacity-0 peer-checked:opacity-100 transition-opacity duration-300"></div>
+</div>
+<span class="font-label text-sm tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">Morning Tea</span>
+</label>
+<label class="group flex items-center cursor-pointer space-x-4">
+<div class="relative w-5 h-5 border border-outline group-hover:border-primary transition-colors duration-300 flex items-center justify-center rounded-sm">
+<input checked="" class="absolute opacity-0 w-full h-full cursor-pointer peer" type="checkbox"/>
+<div class="w-2 h-2 bg-primary opacity-0 peer-checked:opacity-100 transition-opacity duration-300"></div>
+</div>
+<span class="font-label text-sm tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">Deep Focus</span>
+</label>
+<label class="group flex items-center cursor-pointer space-x-4">
+<div class="relative w-5 h-5 border border-outline group-hover:border-primary transition-colors duration-300 flex items-center justify-center rounded-sm">
+<input class="absolute opacity-0 w-full h-full cursor-pointer peer" type="checkbox"/>
+<div class="w-2 h-2 bg-primary opacity-0 peer-checked:opacity-100 transition-opacity duration-300"></div>
+</div>
+<span class="font-label text-sm tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">Physicality</span>
+</label>
+<label class="group flex items-center cursor-pointer space-x-4">
+<div class="relative w-5 h-5 border border-outline group-hover:border-primary transition-colors duration-300 flex items-center justify-center rounded-sm">
+<input class="absolute opacity-0 w-full h-full cursor-pointer peer" type="checkbox"/>
+<div class="w-2 h-2 bg-primary opacity-0 peer-checked:opacity-100 transition-opacity duration-300"></div>
+</div>
+<span class="font-label text-sm tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">Nature Walk</span>
+</label>
+<label class="group flex items-center cursor-pointer space-x-4">
+<div class="relative w-5 h-5 border border-outline group-hover:border-primary transition-colors duration-300 flex items-center justify-center rounded-sm">
+<input checked="" class="absolute opacity-0 w-full h-full cursor-pointer peer" type="checkbox"/>
+<div class="w-2 h-2 bg-primary opacity-0 peer-checked:opacity-100 transition-opacity duration-300"></div>
+</div>
+<span class="font-label text-sm tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">Archival Work</span>
+</label>
+<label class="group flex items-center cursor-pointer space-x-4">
+<div class="relative w-5 h-5 border border-outline group-hover:border-primary transition-colors duration-300 flex items-center justify-center rounded-sm">
+<input class="absolute opacity-0 w-full h-full cursor-pointer peer" type="checkbox"/>
+<div class="w-2 h-2 bg-primary opacity-0 peer-checked:opacity-100 transition-opacity duration-300"></div>
+</div>
+<span class="font-label text-sm tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">Meditation</span>
+</label>
+</div>
+</label></section>
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-12">
+<div class="flex-1">
+<label class="block font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-6">Mood &amp; Stewardship Rating</label>
+<div class="flex items-center space-x-6">
+<div class="flex space-x-2">
+<span class="material-symbols-outlined text-primary cursor-pointer text-3xl" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary cursor-pointer text-3xl" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary cursor-pointer text-3xl" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary cursor-pointer text-3xl" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-outline-variant cursor-pointer text-3xl" data-icon="star">star</span>
+</div>
+<p class="font-headline italic text-on-surface-variant">Sustained Clarity</p>
+</div>
+</div>
+<div class="relative group">
+<a class="relative z-10 w-32 h-32 rounded-full bg-error flex items-center justify-center wax-seal-shadow transition-transform duration-500 group-hover:scale-105 active:scale-95 border-4 border-error-dim/20" type="submit">
+<div class="text-center">
+<span class="material-symbols-outlined text-on-error text-3xl block mb-1" data-icon="verified" data-weight="fill">verified</span>
+<span class="block font-label text-[10px] uppercase tracking-tighter text-on-error leading-tight px-4">Seal &amp; Save</span>
+</div>
+<div class="absolute inset-0 rounded-full bg-error-dim opacity-10 animate-pulse group-hover:animate-none"></div>
+</a>
+<div class="absolute -inset-2 border border-error/10 rounded-full scale-110 group-hover:scale-125 transition-transform duration-700 opacity-20"></div>
+</div>
+</section>
+</form>
+<footer class="mt-20 pt-12 border-t border-outline-variant/10 flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover grayscale brightness-110" data-alt="Close up portrait of a refined man with short dark hair in a charcoal wool coat in a study setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfcnwNZf9N9jK7a0tlfIh7qa0_LFEtoOQMzTwtSKyeTgKvKoDMZUClOEe5TuLseHfgKqfTfREAhE_3EAutl6Sgh2dM9B6Hp0y8PqZk3xiyH11-lU2oVo4AEuS7Tm4AeSF0FoTCSK6T0zj_uVKwF_8DwnCYVATNAxwh4k3F4eDMVtdGkuiTqtIXvNpVMQKJaqWDXdfOdbMvEintaiNZz9iNvNpRvFjwlk7Ur1jRpdA5IEXytDgZiKs-lvv_U32alJJJrx1LF3-5yfoB"/>
+<div>
+<p class="font-label text-xs font-bold text-on-surface">Harshwardhan Pandey</p>
+<p class="font-label text-[10px] text-outline uppercase tracking-wider">Engineer</p>
+</div>
+</div>
+<div class="flex space-x-6 text-outline-variant">
+<span class="material-symbols-outlined text-xl cursor-pointer hover:text-secondary" data-icon="share">share</span>
+<span class="material-symbols-outlined text-xl cursor-pointer hover:text-secondary" data-icon="print">print</span>
+</div>
+</footer>
+<div class="absolute bottom-0 right-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-9xl rotate-12" data-icon="menu_book">menu_book</span>
+</div>
+</article>
+</div>
+</body></html>
