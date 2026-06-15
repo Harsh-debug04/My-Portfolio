@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Harshwardhan Pandey - Project Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#dbdad5",
+                        "surface-bright": "#fbf9f4",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474747",
+                        "tertiary": "#615b4f",
+                        "surface-variant": "#e4e2dd",
+                        "tertiary-fixed": "#ebe1d2",
+                        "surface-container-high": "#eae8e3",
+                        "surface-container-highest": "#e4e2dd",
+                        "surface-container": "#f0eee9",
+                        "tertiary-fixed-dim": "#cec5b7",
+                        "primary-container": "#6a7869",
+                        "on-background": "#1b1c19",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c4c8c1",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#30312e",
+                        "inverse-on-surface": "#f2f1ec",
+                        "tertiary-container": "#7a7467",
+                        "on-error": "#ffffff",
+                        "outline": "#747872",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1f1b12",
+                        "on-primary-fixed-variant": "#3d4a3d",
+                        "surface-container-low": "#f5f3ee",
+                        "primary-fixed": "#d7e7d5",
+                        "on-surface-variant": "#434843",
+                        "on-primary-container": "#f7fff3",
+                        "secondary-fixed": "#e4e2e1",
+                        "primary-fixed-dim": "#bbcbb9",
+                        "secondary": "#5f5e5e",
+                        "surface-tint": "#546254",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface": "#fbf9f4",
+                        "primary": "#526051",
+                        "inverse-primary": "#bbcbb9",
+                        "on-secondary-container": "#656464",
+                        "on-tertiary-fixed-variant": "#4c463b",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "background": "#fbf9f4",
+                        "secondary-container": "#e4e2e1",
+                        "on-primary-fixed": "#121e13",
+                        "on-tertiary-container": "#fffbff",
+                        "on-surface": "#1b1c19",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0px",
+                        lg: "0px",
+                        xl: "0px",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Noto Serif", "serif"],
+                        display: ["Noto Serif", "serif"],
+                        body: ["Newsreader", "serif"],
+                        label: ["Inter", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'noise': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.02%22/%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+        }
+        .bg-noise {
+            background-image: theme('backgroundImage.noise');
+        }
+        .signature-line-v {
+            width: 1px;
+            background-color: theme('colors.outline-variant');
+            opacity: 0.3;
+        }
+        .signature-line-h {
+            height: 1px;
+            background-color: theme('colors.outline-variant');
+            opacity: 0.3;
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.surface');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.outline-variant');
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.outline');
+        }
+
+        .fade-rise {
+            animation: fadeRise 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeRise {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body relative overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Ambient Noise Overlay -->
+<div class="fixed inset-0 pointer-events-none bg-noise z-0"></div>
+<!-- Layout Container -->
+<div class="flex flex-col md:flex-row min-h-screen relative z-10 w-full max-w-[1920px] mx-auto">
+<!-- Left SideNav (AgroTrack) -->
+<nav class="hidden md:flex flex-col w-64 lg:w-72 border-r border-outline-variant/30 bg-surface-container-low shrink-0 h-screen sticky top-0 py-12 px-8 z-40">
+<div class="mb-16">
+<h1 class="font-headline text-display-sm tracking-tight text-on-surface mb-2">AgroTrack</h1>
+<p class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Project Detail</p>
+</div>
+<div class="flex items-center gap-4 mb-16 pb-8 border-b border-outline-variant/30">
+<img alt="Profile" class="w-12 h-12 grayscale object-cover" data-alt="Black and white portrait of a mature male curator with a serious expression, shot in a softly lit studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9c-cALzkitgeUPTjeqHgsf8pH_O1ozUF7lGiebui29sVJLEpdoIL_Pjd6NRlg4h7UamtXBQnn6fqLsAZROYTbU3ipTIDHCmPK5V2rkDHK1ig030weAYxqNZD7QixZidhmBqEJxUAHv6QvGsS0uqc9F_AyCGP4DCo_qE4JCAvESOLyIVkaLIo0HPS2OIQZJlVL6kVJV2L4Gk56DpfFDsM5iSYz0yIj38aG4p91eJUIYvtvRRuyBlvK8xQBZUx-vjJ9ajFkZkaed9mY"/>
+<div>
+<p class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Developer</p>
+<p class="font-headline text-title-md font-bold text-on-surface">Harshwardhan Pandey</p>
+</div>
+</div>
+<ul class="flex-1 space-y-2">
+<li>
+<a class="flex items-center gap-4 px-4 py-3 bg-surface-container-highest text-on-surface relative group" href="#">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">history_edu</span>
+<span class="font-body text-title-md">The Daily Ledger</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-400" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">star_border</span>
+<span class="font-body text-title-md">Aspirations</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-400" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">menu_book</span>
+<span class="font-body text-title-md">Personal Library</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-400" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">chair</span>
+<span class="font-body text-title-md">Private Membership</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-400" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">security</span>
+<span class="font-body text-title-md">Stewardship</span>
+</a>
+</li>
+</ul>
+<div class="mt-auto pt-12 space-y-6">
+<button class="w-full bg-primary text-on-primary font-label text-label-lg uppercase tracking-widest py-4 px-6 hover:bg-primary-container transition-colors duration-400">
+                    New Entry
+                </button>
+<div class="space-y-4">
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface text-sm font-label" href="#">
+<span class="material-symbols-outlined text-[18px]">help</span>
+                        Support
+                    </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface text-sm font-label" href="#">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+                        Journal Settings
+                    </a>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-w-0 bg-surface">
+<!-- TopNavBar JSON implementation -->
+<header class="bg-surface/85 dark:bg-surface/85 backdrop-blur-xl flex justify-between items-center w-full px-6 md:px-12 py-8 max-w-screen-2xl mx-auto sticky top-0 z-50 transition-all duration-400 ease-out">
+<a class="font-headline text-display-sm font-bold tracking-tighter text-on-surface dark:text-inverse-on-surface" href="#">
+                    HARSHWARDHAN PANDEY
+                </a>
+<nav class="hidden md:flex gap-12 items-center">
+<a class="font-body text-body-lg text-on-surface-variant dark:text-on-secondary-fixed-variant pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-400" href="#">Gallery</a>
+<a class="font-body text-body-lg text-primary dark:text-primary-fixed-dim border-b border-primary dark:border-primary-fixed-dim pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-400" href="#">Projects</a>
+<a class="font-body text-body-lg text-on-surface-variant dark:text-on-secondary-fixed-variant pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-400" href="#">Archives</a>
+<a class="font-body text-body-lg text-on-surface-variant dark:text-on-secondary-fixed-variant pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-400" href="#">Essays</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-400">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+</button>
+<button class="w-8 h-8 bg-surface-container-high hover:bg-surface-container-highest transition-colors duration-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="px-6 md:px-12 xl:px-24 pt-8 pb-16 fade-rise">
+<div class="relative w-full h-[512px] min-h-[400px] mb-12 bg-surface-container-low group">
+<img alt="Project Hero" class="w-full h-full object-cover opacity-90 transition-opacity duration-700 group-hover:opacity-100 mix-blend-multiply" data-alt="A moody, high-end editorial shot of a wooden desk with a vintage camera, scattered black and white photographs, and a fountain pen. Warm, directional lighting creates deep shadows, embodying an old-money, minimalist aesthetic in earthy sage and cream tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKj-bdp5cf10zCDFttnlNMiIcPRLun8WOVCkqb2DaHwa8OltpsMuFs4x58Oe86OYTS2z3_LtVqQ8H7pT281ZKJTTi5KK9vicc8kILH-cEJlt8G8gziJkcS4FiJ5ZPza1rmUUMw5ZAsdWlBZlcHSnr6MgrzToFQ_8IV5LlNM_48STS5nOUhpLt6wFOnYzLAskb6AttpuuN5BW2iRfssJZhpp-LlUWNLjYTofX5-tO7ymAQF6g1TC6X0Vqj8SlVQ6LUzKTyYR9Ij2A8c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
+<div class="absolute bottom-12 left-12 max-w-4xl">
+<h1 class="font-headline text-display-lg text-on-surface tracking-tighter leading-tight mb-4 text-shadow-sm">
+                            PORTFOLIO<br/>PROJECT DETAIL
+                        </h1>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<section class="px-6 md:px-12 xl:px-24 pb-32 grid grid-cols-1 lg:grid-cols-12 gap-16 fade-rise" style="animation-delay: 0.1s;">
+<!-- Left Column (Content) -->
+<div class="lg:col-span-8 space-y-24">
+<!-- Vision & Philosophy -->
+<div class="relative">
+<div class="absolute -left-6 md:-left-12 top-2 h-full w-px bg-outline-variant/30 hidden md:block"></div>
+<h2 class="font-headline text-display-md text-on-surface mb-8 tracking-tight">VISION &amp; PHILOSOPHY</h2>
+<div class="font-body text-body-lg text-on-surface-variant leading-relaxed space-y-6 max-w-3xl">
+<p>
+                                Built end-to-end for smallholder farmers who previously had no access to expert agricultural advisory. I designed and implemented a Spring Boot REST microservice backend, Vue.js 3 frontend with AG Grid advisory tables, and a multi-agent LangChain RAG pipeline over 12,000 ICAR instruction-output pairs.
+                            </p>
+<p>
+                                Replacing a ₹2,000/visit agronomist consultation with a sub-2s query response at 50 concurrent users. Chose chunked streaming over full-response delivery after profiling revealed 2.1s median latency on batch mode — cutting perceived response time to under 400ms at p50; added circuit-breaker retry logic and Docker/Kubernetes orchestration, all designed and implemented independently.
+                            </p>
+</div>
+</div>
+<!-- Process Timeline -->
+<div class="relative">
+<h2 class="font-headline text-display-md text-on-surface mb-16 tracking-tight">PROCESS</h2>
+<div class="relative ml-4 md:ml-32">
+<!-- Vertical Line -->
+<div class="absolute left-[15px] top-4 bottom-0 w-px bg-outline-variant"></div>
+<!-- Milestone 1 -->
+<div class="relative flex items-start mb-16 group">
+<div class="absolute -left-32 top-1 text-right w-24 hidden md:block">
+<span class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Oct 16</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center relative z-10 shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors duration-400 mt-1">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+</div>
+<div class="ml-8">
+<h3 class="font-headline text-title-lg text-on-surface mb-2">Patron Gala Prep</h3>
+<p class="font-body text-body-md text-on-surface-variant max-w-md">Finalize guest registry and menu for the Heritage evening foundation event.</p>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="relative flex items-start mb-16 group">
+<div class="absolute -left-32 top-1 text-right w-24 hidden md:block">
+<span class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Oct 18</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface border border-outline-variant flex items-center justify-center relative z-10 shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors duration-400 mt-1">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+</div>
+<div class="ml-8">
+<h3 class="font-headline text-title-lg text-on-surface mb-2">Library Acquisition</h3>
+<p class="font-body text-body-md text-on-surface-variant max-w-md">Awaiting 1st manuscript arrival from the London Antiquarian Society.</p>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="relative flex items-start mb-16 group">
+<div class="absolute -left-32 top-1 text-right w-24 hidden md:block">
+<span class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Oct 21</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface border border-outline-variant flex items-center justify-center relative z-10 shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors duration-400 mt-1">
+<span class="material-symbols-outlined text-[16px]">policy</span>
+</div>
+<div class="ml-8">
+<h3 class="font-headline text-title-lg text-on-surface mb-2">Stewardship Audit</h3>
+<p class="font-body text-body-md text-on-surface-variant max-w-md">Quarterly review of physical asset maintenance and preservation protocols.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Results Section -->
+<div class="relative pt-12 border-t border-outline-variant/30">
+<h2 class="font-headline text-display-md text-on-surface mb-4 tracking-tight">RESULTS</h2>
+<p class="font-body text-title-md text-on-surface-variant italic mb-12">Sophisticated metrics.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Result Card 1 -->
+<div class="bg-surface-container-low p-8 group hover:bg-surface-container-high transition-colors duration-400">
+<div class="h-48 mb-8 overflow-hidden bg-surface-variant">
+<img alt="Books" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-700" data-alt="A close-up row of antique, leather-bound books on a wooden shelf. The lighting is moody and classical, highlighting the gold leaf lettering and textured spines in warm, muted tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_VqnEa1O8AnfYESXemRr0vBMb5IZ6E0YLUoafkxBWiOPS9NKsHPE6tvvTCDP7qHT3cjIpwjo1l3GSEatsyczlhzsDYBgdOLX98C5QRWLanMzFruZWtZqKGrnAHwi7pOZmivuhJHTEr-2qV_Q_vLGP7ErhGrX5uUm-qBy_ex7ao4QlzIYKPOCHCGzzriPsOAFczu4mmVruFhQjweGkyiKBmw3CbXmdGrVT1LALuOFm8kJ9RbdmaNC2GZ5Jh_xbHUxmmzum1HtTKR_R"/>
+</div>
+<p class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest mb-4">Volume IV | Issue 12</p>
+<h3 class="font-headline text-title-lg text-on-surface mb-4">Multi-agent RAG platform</h3>
+<div class="flex items-center justify-between mt-8">
+<span class="font-label text-label-sm text-on-surface-variant">October 12, 2024</span>
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</div>
+<!-- Result Card 2 -->
+<div class="bg-surface-container-low p-8 group hover:bg-surface-container-high transition-colors duration-400 md:translate-y-8">
+<p class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest mb-4">Volume IV | Issue 11</p>
+<h3 class="font-headline text-title-lg text-on-surface mb-4">Sentiment Intelligence Dashboard</h3>
+<p class="font-body text-body-sm text-on-surface-variant mb-8 line-clamp-3">Capturing the essence of permanent objects through the discipline of slow photography.</p>
+<div class="flex items-center justify-between mb-8">
+<span class="font-label text-label-sm text-on-surface-variant">October 09, 2024</span>
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+<div class="h-48 overflow-hidden bg-surface-variant">
+<img alt="Camera" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-700" data-alt="A vintage Leica camera resting on an open book with architectural sketches. Soft, diffused daylight from a nearby window creates a serene, scholarly atmosphere in subtle grey and cream hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCDDp0hm6eLPgfLx27pahaHun3W3K58TKDaPY2vj72xgFsLwkHMPignQt5vweZrrEdyNTlaVaWlcqHFQREPMArZX4aZTv4Yiy7ydsdStiVzVXXUGl182ocBXFeN9U34Hev5lumJtsizvdCjDYxf2i-ZJPULsgH5IjSoLm56H40eaJV84MHaKeB_Q2v36-w5vST7ApOiDogAaIAJwanT2eFB7bM6oFOzeCyAIttTOH00gABZYMJPMJ8_zYMBPpMPGjyjXKdf0abWJye"/>
+</div>
+</div>
+<!-- Result Card 3 -->
+<div class="bg-surface-container-low p-8 group hover:bg-surface-container-high transition-colors duration-400">
+<div class="h-48 mb-8 overflow-hidden bg-surface-variant">
+<img alt="Stillness" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-700" data-alt="A minimalist composition of a clear glass carafe filled with water, sitting on a marble table with a single green leaf beside it. Harsh, dramatic sunlight casts sharp, geometric shadows, evoking a sense of refined stillness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFmdHkKSLvwzp1m1TJhkm83IGICWc2TC5U1xKg04YttsNQsYgoz33kT2FFlHrox8aYu3W6ppKM0BXfcnaJoE4EK_8UGgP_jUSHAMX7-h4d6wbF6xLraCNWcrlKkDzF5igbp2bFKjxUXJYG2xIwHjuKDOCLctsxHSKVtptgzHemJi9mykX8tqQlN039Oq-b--3cS4XvHYpWVkkPsHIHMeUqcvpmELZOinLMpPNB6Y2_tjfPcBcDO4T178di4bk2oZy-Uvpow4J9HuSX"/>
+</div>
+<p class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest mb-4">Volume IV | Issue 09</p>
+<h3 class="font-headline text-title-lg text-on-surface mb-4">Power Grid Failure Predictor</h3>
+<p class="font-body text-body-sm text-on-surface-variant mb-8 line-clamp-2">Built a microservice exposing a gradient boosting model trained on 3 years of Delhi substation data; consumed by a Vue.js 3 dashboard.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-label text-label-sm text-on-surface-variant">October 05, 2024</span>
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (Sidebar) -->
+<div class="lg:col-span-4">
+<div class="sticky top-40 bg-surface-container-highest p-8 md:p-12 relative shadow-[0_20px_40px_rgba(27,28,25,0.04)] fade-rise" style="animation-delay: 0.2s;">
+<!-- Decorative Ledger Corner -->
+<div class="absolute top-0 right-0 w-8 h-8 border-t border-r border-outline-variant/50"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-outline-variant/50"></div>
+<h3 class="font-headline text-display-sm text-on-surface mb-12 tracking-tight">TECHNICAL LEDGER</h3>
+<div class="space-y-12">
+<div>
+<h4 class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest mb-6 border-b border-outline-variant/30 pb-2">Skills</h4>
+<ul class="space-y-4">
+<li class="font-body text-title-md text-on-surface flex items-center justify-between group">
+                                        Backend Development
+                                        <span class="w-0 h-px bg-primary transition-all duration-400 group-hover:w-8"></span>
+</li>
+<li class="font-body text-title-md text-on-surface flex items-center justify-between group">
+                                        Frontend Development
+                                        <span class="w-0 h-px bg-primary transition-all duration-400 group-hover:w-8"></span>
+</li>
+<li class="font-body text-title-md text-on-surface flex items-center justify-between group">
+                                        AI / ML
+                                        <span class="w-0 h-px bg-primary transition-all duration-400 group-hover:w-8"></span>
+</li>
+<li class="font-body text-title-md text-on-surface flex items-center justify-between group">
+                                        DevOps
+                                        <span class="w-0 h-px bg-primary transition-all duration-400 group-hover:w-8"></span>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest mb-6 border-b border-outline-variant/30 pb-2">Tools</h4>
+<ul class="space-y-4">
+<li class="font-body text-title-md text-on-surface">Java, Python, Spring Boot</li>
+<li class="font-body text-title-md text-on-surface">Vue.js, React.js</li>
+<li class="font-body text-title-md text-on-surface">LangChain, LLM fine-tuning, RAG</li>
+<li class="font-body text-title-md text-on-surface italic">Docker, Kubernetes, Azure DevOps</li>
+</ul>
+</div>
+<div class="pt-8 border-t border-outline-variant/30">
+<h3 class="font-headline text-display-sm text-on-surface mb-8 tracking-tight">IMPACT</h3>
+<ul class="space-y-4">
+<li class="font-body text-body-lg text-on-surface"><strong class="font-headline font-bold">35% reduction</strong> in LLM hallucination rate</li>
+<li class="font-body text-body-lg text-on-surface"><strong class="font-headline font-bold">40% cut</strong> in average API response latency</li>
+<li class="font-body text-body-lg text-on-surface"><strong class="font-headline font-bold">60% elimination</strong> of downstream data errors</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer JSON implementation -->
+<footer class="bg-surface-container-low dark:bg-surface-container w-full py-24 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-start w-full px-12 max-w-screen-2xl mx-auto gap-12">
+<div class="max-w-md">
+<div class="font-headline text-title-lg text-on-surface dark:text-inverse-on-surface mb-6">
+                            HARSHWARDHAN PANDEY
+                        </div>
+<p class="font-body text-body-lg leading-relaxed text-on-surface-variant dark:text-on-secondary-fixed-variant">
+                            © 2024 Harshwardhan Pandey. All rights reserved. Crafted for the intentional.
+                        </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-12 sm:gap-24">
+<div class="flex flex-col gap-4">
+<h4 class="font-label text-label-sm uppercase tracking-widest text-on-surface-variant mb-2">Connect</h4>
+<a class="font-body text-body-lg leading-relaxed text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-400" href="#">Instagram</a>
+<a class="font-body text-body-lg leading-relaxed text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-400" href="#">LinkedIn</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label text-label-sm uppercase tracking-widest text-on-surface-variant mb-2">Explore</h4>
+<a class="font-body text-body-lg leading-relaxed text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-400" href="#">Journal</a>
+<a class="font-body text-body-lg leading-relaxed text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-400" href="#">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>
