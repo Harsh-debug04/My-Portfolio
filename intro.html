@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="bg-surface" lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Introduction — Harshwardhan Pandey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dbdad5",
+                        "surface-bright": "#fbf9f4",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474747",
+                        "tertiary": "#615b4f",
+                        "surface-variant": "#e4e2dd",
+                        "tertiary-fixed": "#ebe1d2",
+                        "surface-container-high": "#eae8e3",
+                        "surface-container-highest": "#e4e2dd",
+                        "surface-container": "#f0eee9",
+                        "tertiary-fixed-dim": "#cec5b7",
+                        "primary-container": "#6a7869",
+                        "on-background": "#1b1c19",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c4c8c1",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#30312e",
+                        "inverse-on-surface": "#f2f1ec",
+                        "tertiary-container": "#7a7467",
+                        "on-error": "#ffffff",
+                        "outline": "#747872",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1f1b12",
+                        "on-primary-fixed-variant": "#3d4a3d",
+                        "surface-container-low": "#f5f3ee",
+                        "primary-fixed": "#d7e7d5",
+                        "on-surface-variant": "#434843",
+                        "on-primary-container": "#f7fff3",
+                        "secondary-fixed": "#e4e2e1",
+                        "primary-fixed-dim": "#bbcbb9",
+                        "secondary": "#5f5e5e",
+                        "surface-tint": "#546254",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface": "#fbf9f4",
+                        "primary": "#526051",
+                        "inverse-primary": "#bbcbb9",
+                        "on-secondary-container": "#656464",
+                        "on-tertiary-fixed-variant": "#4c463b",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "background": "#fbf9f4",
+                        "secondary-container": "#e4e2e1",
+                        "on-primary-fixed": "#121e13",
+                        "on-tertiary-container": "#fffbff",
+                        "on-surface": "#1b1c19",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif", "serif"],
+                        "display": ["Noto Serif", "serif"],
+                        "body": ["Newsreader", "serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+</script>
+<style>
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.02;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+</style>
+</head>
+<body class="font-body min-h-screen flex flex-col">
+<div class="grain-overlay"></div>
+
+
+<header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_20px_40px_rgba(27,28,25,0.04)]">
+<div class="flex justify-between items-center w-full px-12 py-8 max-w-screen-2xl mx-auto">
+<div class="font-headline text-display-sm font-bold tracking-tighter text-on-surface">HARSHWARDHAN PANDEY</div>
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+<a class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="index.html">Projects</a>
+<a class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="intro.html">Introduction</a>
+<a class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="archives.html">Archives</a>
+</nav>
+<div class="flex items-center space-x-6">
+<a class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="inquire.html">Inquire</a>
+</div>
+</div>
+</header>
+
+
+<main class="flex-grow pt-48 pb-32">
+<section class="px-12 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-5">
+<div class="bg-surface-container aspect-[4/5] overflow-hidden sticky top-40">
+<img alt="Portrait of Harshwardhan Pandey" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80"/>
+</div>
+</div>
+<div class="lg:col-span-7">
+<p class="font-label text-sm uppercase tracking-[0.3em] text-primary mb-6">About Me</p>
+<h1 class="font-display text-5xl md:text-6xl tracking-tight text-on-surface text-balance leading-tight">I design and build intelligent systems.</h1>
+<div class="mt-12 space-y-8 max-w-2xl">
+<p class="font-body text-xl text-on-surface leading-relaxed">I&apos;m Harshwardhan Pandey, an AI systems engineer and builder with a deep fascination for the structures — both digital and physical — that shape how we live and think. My work sits at the intersection of machine intelligence, thoughtful design, and rigorous engineering.</p>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">Over the past several years, I&apos;ve designed and deployed production-grade machine learning pipelines, retrieval systems, and autonomous agents. I care about systems that are not only capable, but legible — software whose behavior can be reasoned about, trusted, and refined over time.</p>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">I approach building the way an architect approaches a site: with attention to constraints, context, and the quiet decisions that determine whether something endures. Whether it&apos;s a distributed inference layer or a small internal tool, I believe the same principles apply — clarity, intention, and craft.</p>
+</div>
+
+<div class="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-2xl">
+<div>
+<h2 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-4">Focus Areas</h2>
+<ul class="font-body text-lg text-on-surface space-y-2">
+<li>Applied Machine Learning</li>
+<li>Autonomous Agents</li>
+<li>Systems Architecture</li>
+<li>Retrieval &amp; Inference</li>
+</ul>
+</div>
+<div>
+<h2 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-4">Principles</h2>
+<ul class="font-body text-lg text-on-surface space-y-2">
+<li>Legibility over cleverness</li>
+<li>Build to endure</li>
+<li>Constraints breed clarity</li>
+<li>Craft as a discipline</li>
+</ul>
+</div>
+</div>
+
+<div class="mt-16">
+<a class="inline-block font-label text-sm uppercase tracking-widest bg-primary text-on-primary px-10 py-4 hover:bg-primary-container transition-colors" href="inquire.html">Get in Touch</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="bg-surface-container-low w-full py-24 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-start w-full px-12 max-w-screen-2xl mx-auto gap-12">
+<div class="max-w-sm">
+<div class="font-headline text-title-lg text-on-surface mb-6">HARSHWARDHAN PANDEY</div>
+<p class="font-body text-body-lg text-on-surface-variant">© 2026 Harshwardhan Pandey. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
